@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 <div class="container">
     <div class="filters">
+      <a class="button" [ngClass]="{'active': filter === ''}" (click)="filter=''; clickEvent()">All</a>
       <a class="button" [ngClass]="{'active': filter === 'Heads'}" (click)="filter='Heads'; clickEvent()">Heads</a>
       <a class="button" [ngClass]="{'active': filter === 'Arms'}" (click)="filter='Arms'; clickEvent()">Arms</a>
       <a class="button" [ngClass]="{'active': filter === 'Torsos'}" (click)="filter='Torsos'; clickEvent()">Torsos</a>
       <a class="button" [ngClass]="{'active': filter === 'Bases'}" (click)="filter='Bases'; clickEvent()">Bases</a>
-      <a class="button" [ngClass]="{'active': filter === ''}" (click)="filter=''; clickEvent()">All</a>
     </div>
   
     <ul class="products">
