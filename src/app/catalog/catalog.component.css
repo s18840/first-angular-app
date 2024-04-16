@@ -24,18 +24,17 @@
   }
 
   .button {
-    background-color: violet;
+    background-color: gray;
     width: 100px;
-    height: 30px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 45px;
     border: none;
-  }
 
-  .cta {
-    background-color: aquamarine;
-    border: none;
+    &.active {
+      font-weight: bold;
+      color: violet;
+    }
   }
-  

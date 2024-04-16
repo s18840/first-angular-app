@@ -15,6 +15,7 @@
 
 .left * {
   margin-right: 25px;
+  text-decoration: none;
 }
 
 .logo {
@@ -24,6 +25,16 @@
 .cart {
   display: flex;
   position: relative;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .icon-margin {
+    margin-right: 5px;
+  }
 }
 
 .cartCount {
@@ -53,6 +64,7 @@
 
 .right * {
   margin-left: 25px;
+  text-decoration: none;
 }
 
 .right img {

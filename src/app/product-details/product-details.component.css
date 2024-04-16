@@ -58,4 +58,9 @@
   .strikeThrough {
     text-decoration: line-through;
     font-size: 18px;
-}
+  }
+
+  .cta {
+    background-color: rgba(238, 130, 238, 0.453);
+    border: none;
+  }

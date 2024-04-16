@@ -11,6 +11,7 @@ export class CatalogComponent {
   products: IProduct[];
   filter: string = ''; 
   private carSvc: CartService = inject(CartService);
+  toggle: boolean = false;
   
   constructor() {
     this.products = [
@@ -188,6 +189,10 @@ export class CatalogComponent {
           discount: 0,
         },
       ]
+  }
+
+  clickEvent() {
+    this.toggle = !this.toggle;
   }
 
   addToCart(product: IProduct){
