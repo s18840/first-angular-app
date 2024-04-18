@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { IProduct } from './product.model';
-import { CartService } from '../cart.service';
+import { CartService } from '../cart/cart.service';
 import { ProductService } from './product.service';
 
 @Component({
@@ -13,6 +13,7 @@ export class CatalogComponent {
   filter: string = ''; 
   private carSvc: CartService = inject(CartService);
   toggle: boolean = false;
+  cartTotalPrice: number = 0;
   
   constructor(private productSvc : ProductService) {
 
@@ -30,6 +31,12 @@ export class CatalogComponent {
 
   addToCart(product: IProduct){
     this.carSvc.add(product);
+    if(product.discount > 0) {
+      this.cartTotalPrice += product.price - (product.price * product.discount);
+    } else {
+      this.cartTotalPrice += product.price;
+    }
+    console.log(this.cartTotalPrice)
   }
 
   getImageUrl(product: IProduct){

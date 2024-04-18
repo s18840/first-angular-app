@@ -5,7 +5,7 @@
   
   .filters {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 25px 200px;
   }
   
@@ -32,9 +32,11 @@
     align-items: center;
     border-radius: 45px;
     border: none;
+    margin-right: 30px;
 
     &.active {
       font-weight: bold;
       color: violet;
+      border: 2px solid;
     }
   }
